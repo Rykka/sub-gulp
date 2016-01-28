@@ -45,7 +45,10 @@ function start_server(){
         lr.listen() 
         is_start = true
     } else {
-        lr.reload() 
+        setTimeout(function() {  
+            lr.reload() 
+        }, 300);
+
     }
 }
 

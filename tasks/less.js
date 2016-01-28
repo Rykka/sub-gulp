@@ -10,7 +10,7 @@ gulp.task('less', function () {
     gutil.log('Compile less');
 
     // Specific less dir to avoid the 'less' dir in dest.
-    return gulp.src('./client/css/**/*.less')
+    return gulp.src('./client/**/*.less')
         .pipe(plumber())
         .pipe(less({
             paths: [ path.join(__dirname, '..', '..','app', 'client', 'css', 'includes') ]
@@ -23,4 +23,4 @@ gulp.task('less', function () {
 
 });
 
-watch_list.push(['client/css/**/*.less', ['less']])
+watch_list.push(['client/**/*.less', ['less']])
